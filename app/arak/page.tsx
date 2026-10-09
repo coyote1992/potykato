@@ -8,7 +8,7 @@ import { cabins, dayTickets, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Árak",
   description: "Napijegy, faházbérlés és esküvői, rendezvényi árajánlat a Potykató Pihenőparkban. Bankkártya és SZÉP Kártya elfogadóhely.",
-  alternates: { canonical: "/arak/" },
+  alternates: { canonical: `${site.url}/arak/` },
 };
 
 function PriceList({ items }: { items: readonly { name: string; price: string; unit: string }[] }) {

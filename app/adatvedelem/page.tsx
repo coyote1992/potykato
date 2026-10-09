@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Adatvédelem",
   description: "Adatkezelési tájékoztató a Potykató Pihenőpark weboldalához.",
-  alternates: { canonical: "/adatvedelem/" },
+  alternates: { canonical: `${site.url}/adatvedelem/` },
   robots: { index: false },
 };
 

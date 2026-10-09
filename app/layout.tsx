@@ -9,8 +9,13 @@ import { sans, script, serif } from "@/lib/fonts";
 import { facts, site } from "@/lib/site";
 import "./globals.css";
 
+// Link previews (og.jpg) come from wherever the site is deployed; canonical URLs stay on potykato.hu.
+const deployedUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : site.url);
+
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(deployedUrl),
   title: {
     default: "Potykató Pihenőpark · Esküvő a tóparton, a Nyíri erdőben",
     template: "%s · Potykató Pihenőpark",
@@ -22,7 +27,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Szabadtéri esküvői szertartás a Potykató Pihenőparkban" }],
   },
-  alternates: { canonical: "/" },
+  alternates: { canonical: `${site.url}/` },
 };
 
 export const viewport: Viewport = {
@@ -39,7 +44,7 @@ const jsonLd = {
   url: site.url,
   telephone: site.phone,
   email: site.email,
-  image: `${site.url}/og.jpg`,
+  image: `${deployedUrl}/og.jpg`,
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address.street,

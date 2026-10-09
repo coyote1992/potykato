@@ -8,7 +8,7 @@ import { cabins, facts, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Szállás – faházak a parkban",
   description: `Bérelhető faházak ${facts.cabinBeds} főnek a Potykató Pihenőparkban, konyhával, hűtővel, ágyneművel. Napi bérleti díjak, sátorozás, és a ${facts.vackorDistance}-re lévő Vackor Vár szálloda.`,
-  alternates: { canonical: "/szallas/" },
+  alternates: { canonical: `${site.url}/szallas/` },
 };
 
 export default function Szallas() {

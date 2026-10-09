@@ -12,7 +12,7 @@ import { facts, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Esküvő és rendezvények",
   description: `Esküvő a tóparton, a Nyíri erdő közepén: polgári szertartás a helyszínen, eső ellen zárható pavilon ${facts.mainPavilionGuests} vendégnek, faházak a vendégeknek. Családi és céges rendezvények Kecskemét mellett.`,
-  alternates: { canonical: "/eskuvo/" },
+  alternates: { canonical: `${site.url}/eskuvo/` },
 };
 
 const faq = [

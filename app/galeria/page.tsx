@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { site } from "@/lib/site";
 import { Gallery } from "@/components/Gallery";
 import { Inquiry } from "@/components/Inquiry";
 import { PageHero } from "@/components/PageHero";
@@ -6,7 +7,7 @@ import { PageHero } from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "Galéria",
   description: "Fotók a Potykató Pihenőparkról: esküvők és dekorációk, a pavilonok és a tóparti terasz, a tó, a faházak és a park mindennapjai.",
-  alternates: { canonical: "/galeria/" },
+  alternates: { canonical: `${site.url}/galeria/` },
 };
 
 export default function Galeria() {

@@ -8,7 +8,7 @@ import { dayTickets, facts, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Horgászat",
   description: `Sporthorgászat a Potykató ${facts.lakeHa} hektáros, ${facts.lakeDepth} mély tavában: ponty, amur, csuka. Napijegy a helyszínen, fedett kiülős stégek, fogd meg és engedd vissza.`,
-  alternates: { canonical: "/horgaszat/" },
+  alternates: { canonical: `${site.url}/horgaszat/` },
 };
 
 const fish = [

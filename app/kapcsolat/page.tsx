@@ -8,7 +8,7 @@ import { facts, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Kapcsolat és megközelítés",
   description: `Potykató Pihenőpark, ${site.address.full}. Telefon: ${site.phone}. Kecskeméttől ${facts.fromKecskemet}-re, a hetényegyházi Nyíri erdő főbejáratával szinte szemben.`,
-  alternates: { canonical: "/kapcsolat/" },
+  alternates: { canonical: `${site.url}/kapcsolat/` },
 };
 
 export default function Kapcsolat() {
